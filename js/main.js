@@ -195,6 +195,51 @@ let loaded = () => {
     });
 };
 
+document.querySelectorAll('.offcanvas-body .nav-link').forEach(link => {
+    link.addEventListener('click', event => {
+        const href = link.getAttribute('href');
+        // Evita el comportamiento predeterminado en enlaces con submenús
+        if (link.classList.contains('dropdown-toggle')) {
+            return;
+        }
+
+        // Solo actuar si es un enlace interno (que empieza con #)
+        if (href && href.startsWith('#')) {
+            event.preventDefault(); // Previene el salto inmediato
+            const offcanvas = document.querySelector('#offcanvasNavbar');
+            const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
+            if (offcanvasInstance) {
+                offcanvasInstance.hide(); // Cierra el menú
+            }
+            // Navega después de un breve retraso
+            setTimeout(() => {
+                window.location.hash = href; // Realiza la navegación
+            }, 300); // Ajusta el tiempo si es necesario
+        }
+    });
+});
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', event => {
+        const href = item.getAttribute('href');
+        // Asegura que sea un enlace interno
+        if (href && href.startsWith('#')) {
+            event.preventDefault(); // Previene el salto inmediato
+            const offcanvas = document.querySelector('#offcanvasNavbar');
+            const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
+            if (offcanvasInstance) {
+                offcanvasInstance.hide(); // Cierra el menú principal
+            }
+            // Navega después de cerrar el menú
+            setTimeout(() => {
+                window.location.hash = href;
+            }, 300); // Ajusta el tiempo si es necesario
+        }
+    });
+});
+
+
+
+
 
 window.addEventListener("DOMContentLoaded", ready);
 window.addEventListener("load", loaded);
