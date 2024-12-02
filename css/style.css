@@ -1691,5 +1691,20 @@ a:hover {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(77, 100, 141, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+/* Color del cuadrito de hamburguesa*/
+.offcanvas {
+  background-color: #0f1c2e; 
+}
+
+/* texto*/
+.offcanvas .nav-link {
+  color: #acc2ef; 
+}
+
+/* color "X" */
+.offcanvas .btn-close {
+  color: #acc2ef; 
+  opacity: 1; 
+}
 
 
