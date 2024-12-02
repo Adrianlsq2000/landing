@@ -1631,6 +1631,18 @@ a:hover {
   border-color: var(--primary-200) !important;
 }
 
+@media (min-width: 992px) {
+  .sticky-nav {
+    position: sticky;
+    top: 0; /* Fija la posición al inicio de la página */
+    z-index: 1030; /* Asegura que esté encima de otros elementos */
+    background-color: #f8f9fa; /* Mantiene el fondo claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade un efecto de sombra sutil */
+    transition: background-color 0.3s ease; /* Suaviza los cambios de fondo */
+  }
+}
+
+
 
 
 

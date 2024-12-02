@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <title>Thorn Crochet - Flores y mas</title>
   <meta charset="utf-8">
@@ -153,52 +152,7 @@
   </svg>
 
   <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
-
-
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
-    <div class="offcanvas-header justify-content-center">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
-          <span class="badge bg-primary rounded-pill">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Growers cider</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$12</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Fresh grapes</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Heinz tomato ketchup</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-        </ul>
-
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to Checkout</button>
-      </div>
-    </div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center">
+  <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center sticky-nav">
     <div class="container-fluid">
       <div class="row justify-content-between align-items-center w-100">
 
@@ -206,7 +160,6 @@
           <a class="navbar-brand text-white" href="index.html">
             Thorn-Crochet
           </a>
-          <ima></ima>
         </div>
 
         <div class="col-auto">
@@ -217,7 +170,7 @@
 
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
+            <div class="offcanvas-header offcanvas-end">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
@@ -226,31 +179,31 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="#Bienvenidos">Home</a>
+                  <a class="nav-link" href="#Home">Home</a>
                 </li>
                 <li>
                   <a class="nav-link" href="#Quienes-somos">Quiénes somos</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="dropdownShop" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Cátalogo</a>
+                    aria-haspopup="true" aria-expanded="false">Catálogo</a>
                   <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownShop">
                     <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Amigurumis Personalizados</a>
+                      <a href="#catalog" class="dropdown-item item-anchor">Creaciones Exclusivas</a>
                     </li>
                     <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Accesorios</a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Flores tejidas a mano</a>
+                      <a href="#Pdisponibles" class="dropdown-item item-anchor">Productos Disponibles</a>
                     </li>
                   </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Testimonios">Reseñas</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#contact-form">Votaciones</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#Testimonios">Reseñas</a>
+                  <a class="nav-link" href="#SubV">Suscribete y participa</a>
                 </li>
               </ul>
             </div>
@@ -259,10 +212,6 @@
 
         <div class="col-3 col-lg-auto">
           <ul class="list-unstyled d-flex m-0">
-            <li class="d-none d-lg-block">
-              <a href="index.html" class="text-uppercase mx-3">Wishlist <span class="wishlist-count">(0)</span>
-              </a>
-            </li>
             <li class="d-none d-lg-block">
               <a href="index.html" class="text-uppercase mx-3" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">Cart <span class="cart-count">(0)</span>
@@ -301,7 +250,7 @@
   <section id="billboard" class="bg-light py-5">
     <div class="container">
       <div class="row justify-content-center">
-        <h1 id="Bienvenidos" class="section-title text-center mt-4" data-aos="fade-up">Bienvenidos a Thorn-Crochet</h1>
+        <h1 id="Home" class="section-title text-center mt-4" data-aos="fade-up">Bienvenidos a Thorn-Crochet</h1>
         <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
           <p>En Thron Crochet, transformamos hilos en arte. Desde Salinas, Ecuador, creamos piezas únicas hechas a mano
             con dedicación y amor. Especializados en amigurumis, accesorios y prendas tejidas, ofrecemos diseños
@@ -362,7 +311,7 @@
     </div>
   </section>
   <section id="catalog" class="bg-light py-5">
-    <h2 class="text-center">Catálogo de productos</h2>
+    <h2 class="text-center">Creaciones Exclusivas</h2>
     <p style="font-family: Arial, sans-serif; line-height: 1.6; color: #c9d1d9; text-align: center;">
       En Thorn-Crochet te ofrecemos una variedad de productos hechos a mano con amor y dedicación. Nuestros
       <span style="font-weight: bold; color: #acc2ef;">amigurumis y llaveros personalizados</span> están diseñados para
@@ -380,13 +329,13 @@
           <div class="col-md-4">
             <div class="cat-item image-zoom-effect">
               <div class="image-holder">
-                <a href="index.html">
+                <a href="#AP">
                   <img src="images/FOTOSLANDING/dawnMorat.png" alt="categories" class="product-image img-fluid">
                 </a>
               </div>
               <div class="category-content">
                 <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">Amigurumis personalizados</a>
+                  <a href="#AP" class="btn btn-common text-uppercase">Amigurumis personalizados</a>
                 </div>
               </div>
             </div>
@@ -394,13 +343,13 @@
           <div class="col-md-4">
             <div class="cat-item image-zoom-effect">
               <div class="image-holder">
-                <a href="index.html">
+                <a href="#LP">
                   <img src="images/FOTOSLANDING/dawnLlaveroCSP.png" alt="categories" class="product-image img-fluid">
                 </a>
               </div>
               <div class="category-content">
                 <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">LLaveros Personalizados</a>
+                  <a href="#LP" class="btn btn-common text-uppercase">LLaveros Personalizados</a>
                 </div>
               </div>
             </div>
@@ -408,13 +357,13 @@
           <div class="col-md-4">
             <div class="cat-item image-zoom-effect">
               <div class="image-holder">
-                <a href="index.html">
+                <a href="#FM">
                   <img src="images/FOTOSLANDING/dawnMargaritas.png" alt="categories" class="product-image img-fluid">
                 </a>
               </div>
               <div class="category-content">
                 <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">Flores tejidas a mano</a>
+                  <a href="#FM" class="btn btn-common text-uppercase">Flores tejidas a mano</a>
                 </div>
               </div>
             </div>
@@ -425,9 +374,9 @@
   </section>
   <section id="new-arrival" class="new-arrival product-carousel py-5 position-relative overflow-hidden">
     <div class="container">
-      <h2 class="text-center">Productos Disponibles</h2>
+      <h2 id="Pdisponibles" class="text-center">Productos Disponibles</h2>
       <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-uppercase">Amigurumis Personalizados</h4>
+        <h4 id="AP" class="text-uppercase">Amigurumis Personalizados</h4>
         <a href="index.html" class="btn-link">Ver todos los productos</a>
       </div>
       <div class="swiper product-swiper open-up" data-aos="zoom-out">
@@ -548,7 +497,7 @@
   <section id="best-sellers" class="best-sellers product-carousel py-5 position-relative overflow-hidden">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-uppercase">LLaveros Personalizados</h4>
+        <h4 id="LP" class="text-uppercase">LLaveros Personalizados</h4>
         <a href="index.html" class="btn-link">Ver todos los productos</a>
       </div>
       <div class="swiper product-swiper open-up" data-aos="zoom-out">
@@ -696,7 +645,7 @@
   <section id="related-products" class="related-products product-carousel py-5 position-relative overflow-hidden">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-uppercase">Flores tejidas a mano</h4>
+        <h4 id="FM" class="text-uppercase">Flores tejidas a mano</h4>
         <a href="index.html" class="btn-link">Ver todos los productos</a>
       </div>
       <div class="swiper product-swiper open-up" data-aos="zoom-out">
@@ -866,7 +815,7 @@
   <section id="contact-form" class="py-5">
     <div class="container">
       <h2 class="text-center">Votaciones para el proximo producto</h2>
-      <p>¡Recuerda! El producto con más votos será el próximo que lanzaremos. ¡Tu opinión es clave para ayudarnos a
+      <p class="text-center">¡Recuerda! El producto con más votos será el próximo que lanzaremos. ¡Tu opinión es clave para ayudarnos a
         elegir!</p>
       <table class="table table-hover table-light table-borderless">
         <thead>
@@ -898,7 +847,7 @@
       <div class="row justify-content-center">
         <div class="col-md-8 py-5 my-5">
           <div class="subscribe-header text-center pb-3">
-            <h3 class="section-title text-uppercase">¡Suscríbete y elige el próximo producto que lanzaremos!</h3>
+            <h3 id="SubV" class="section-title text-uppercase">¡Suscríbete y elige el próximo producto que lanzaremos!</h3>
           </div>
           <form id="form" class="d-flex flex-wrap gap-2">
             <input id="form-name" type="text" name="name" placeholder="Escriba su nombre."

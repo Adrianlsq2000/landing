@@ -195,7 +195,13 @@ let loaded = () => {
     });
 };
 
+
 window.addEventListener("DOMContentLoaded", ready);
 window.addEventListener("load", loaded);
+
+
+
+
+
 
 
