@@ -34,11 +34,17 @@ let sendData = () => {
 // Función para obtener datos de suscripciones
 let getData = async () => {
     try {
-        const response = await fetch(databaseURL);
+        // Hacer una solicitud GET
+        const response = await fetch(databaseURL, { method: 'GET' });
         if (!response.ok) {
-            alert("Hemos experimentado un error. ¡Vuelve pronto!");
+            throw new Error(`Error al obtener los datos: ${response.statusText}`);
         }
+
+        // Procesar la respuesta
         const data = await response.json();
+        console.log("Datos obtenidos (GET):", data); // Imprimir los datos obtenidos
+
+        // Código adicional: contar suscripciones y mostrarlas en la tabla
         if (data) {
             let countSubs = new Map();
             if (Object.keys(data).length > 0) {
@@ -64,10 +70,15 @@ let getData = async () => {
             }
         }
     } catch (error) {
-        alert("Hemos experimentado un error. ¡Vuelve pronto!");
-        console.error(error);
+        console.error("Error al realizar la solicitud GET:", error);
     }
 };
+//Probar get 
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Probando la función GET...');
+    getData(); 
+});
+
 
 //Actualizar votos de la tabla de votaciones
 let updateVotes = async () => {
@@ -203,43 +214,36 @@ document.querySelectorAll('.offcanvas-body .nav-link').forEach(link => {
             return;
         }
 
-        // Solo actuar si es un enlace interno (que empieza con #)
         if (href && href.startsWith('#')) {
-            event.preventDefault(); // Previene el salto inmediato
+            event.preventDefault(); 
             const offcanvas = document.querySelector('#offcanvasNavbar');
             const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
             if (offcanvasInstance) {
-                offcanvasInstance.hide(); // Cierra el menú
+                offcanvasInstance.hide(); 
             }
-            // Navega después de un breve retraso
+            
             setTimeout(() => {
-                window.location.hash = href; // Realiza la navegación
-            }, 300); // Ajusta el tiempo si es necesario
+                window.location.hash = href; 
+            }, 300); 
         }
     });
 });
 document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
     item.addEventListener('click', event => {
         const href = item.getAttribute('href');
-        // Asegura que sea un enlace interno
         if (href && href.startsWith('#')) {
-            event.preventDefault(); // Previene el salto inmediato
+            event.preventDefault(); 
             const offcanvas = document.querySelector('#offcanvasNavbar');
             const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
             if (offcanvasInstance) {
-                offcanvasInstance.hide(); // Cierra el menú principal
+                offcanvasInstance.hide(); 
             }
-            // Navega después de cerrar el menú
             setTimeout(() => {
                 window.location.hash = href;
-            }, 300); // Ajusta el tiempo si es necesario
+            }, 300);
         }
     });
 });
-
-
-
-
 
 window.addEventListener("DOMContentLoaded", ready);
 window.addEventListener("load", loaded);
