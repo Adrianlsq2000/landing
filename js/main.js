@@ -1,7 +1,7 @@
 const databaseURL = 'https://landing-122b5-default-rtdb.firebaseio.com/respuestas.json';
 
 // Función para enviar los datos del formulario
-let sendData = () => {  
+let sendData = () => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
     data['saved'] = new Date().toLocaleString('es-CO', { timeZone: 'America/Guayaquil' });
@@ -20,7 +20,7 @@ let sendData = () => {
             return response.json();
         })
         .then(() => {
-            alert('Gracias por suscribirte, nos pondremos en contacto contigo pronto.');
+            alert('Gracias por suscribirte y participar en la votacion.');
             form.reset();
             getData(); // Actualizar suscripciones
             updateVotes(); // Actualizar votaciones
@@ -126,7 +126,7 @@ let ready = () => {
 let loaded = () => {
     console.log('Iframes e Images cargadas');
     let myform = document.getElementById('form');
-      
+
     myform.addEventListener('submit', (eventSubmit) => {
         eventSubmit.preventDefault();
 
